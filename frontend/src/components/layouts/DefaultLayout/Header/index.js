@@ -9,7 +9,7 @@ function Header() {
         <div className={styles.Content}>
             <div className={styles.Logo} >
                 <NavLink to='/'> 
-                    <img className={styles.LogoImg} src="https://anybooks.vn/uploads/1792221100_anybookssachhaynendocreviewsachanybookslogo.png" alt="Anybooks - Sách Hay Nên Đọc - Review Sách" title="Anybooks - Sách Hay Nên Đọc - Review Sách"/></NavLink>
+                    <img className={styles.LogoImg} src="Logo.svg"/></NavLink>
                 <NavLink/>
             </div>
             <div className={styles.Option}>
