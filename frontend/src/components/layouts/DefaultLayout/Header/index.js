@@ -2,26 +2,23 @@ import {NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMagnifyingGlass, faUser, faCartShopping} from '@fortawesome/free-solid-svg-icons';
+import {useSelector} from 'react-redux';
 
 function Header() {
+
+    const User = useSelector((state) => state.auth.login.currentUser);
+
     return (
       <header className={styles.Wrapper}>
-        <div className={styles.Content}>
+        <div className='Content'>
             <div className={styles.Logo} >
                 <NavLink to='/'> 
-<<<<<<< HEAD
                     <img className={styles.LogoImg} src="https://anybooks.vn/uploads/1792221100_anybookssachhaynendocreviewsachanybookslogo.png" alt="Anybooks - Sách Hay Nên Đọc - Review Sách" title="Anybooks - Sách Hay Nên Đọc - Review Sách"/></NavLink>
-=======
-                    <img className={styles.LogoImg} src="Logo.svg"/></NavLink>
->>>>>>> 7d581b225e717fae6906efdc70062b2b83722d9a
                 <NavLink/>
             </div>
             <div className={styles.Option}>
-                <NavLink to='/thinhhanh'>
-                    Thịnh Hành
-                </NavLink>
-                <NavLink to='/theloai'>
-                    Thể Loại
+                <NavLink to='/sanpham'>
+                    Sản Phẩm
                 </NavLink>
                 <NavLink to='/lienhe'>
                     Liên Hệ
@@ -34,9 +31,16 @@ function Header() {
                 </button>
             </div>
             <div className={styles.Action}>
+                {User ? 
                 <button className={styles.ActionUser}>
                     <FontAwesomeIcon icon={faUser}/>
-                </button>
+                    <span>{User.staff.username}</span>
+                </button>    
+                :
+                <div style={{paddingLeft: '36px'}} className={styles.ActionUser}>  
+                    <NavLink style={{textDecoration: 'none',color:'black'}} to='/login' >Đăng Nhập</NavLink>
+                </div>
+                }
                 <button className={styles.ActionCart}>
                     <FontAwesomeIcon icon={faCartShopping}/>
                 </button>

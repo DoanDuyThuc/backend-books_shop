@@ -26,9 +26,9 @@ class authController {
     
     async loginUser(req,res) {
         try {
-            const staff = await Staffs.findOne({username: req.body.username})
+            const staff = await Staffs.findOne({email: req.body.email})
             if(!staff){
-                res.status(404).json("ko tìm thấy username");
+                res.status(404).json("ko tìm thấy email");
             }
 
             //so sánh password nhập vs database

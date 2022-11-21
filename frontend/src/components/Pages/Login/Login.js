@@ -1,30 +1,24 @@
-<<<<<<< HEAD
-
-function Login() {
-    return (
-      <div className="Login">
-          <h1>Login Pages</h1>
-      </div>
-    );
-  }
   
-  export default Login;
-  
-=======
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Login.css';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from 'react-hook-form';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { loginUser } from '../../../redux/apiRequest';
+import { useDispatch } from 'react-redux';
 
 function Login() {
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = (data) => loginUser(data,dispatch,navigate);
     return (
         <div className="Login">
             <img src="backgroundlogin.svg"></img>
@@ -76,4 +70,3 @@ function Login() {
 }
 
 export default Login;
->>>>>>> 7d581b225e717fae6906efdc70062b2b83722d9a
