@@ -15,6 +15,10 @@
     "react": "^18.2.0",
     "react-app-rewired": "^2.2.1",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
+=======
+    "react-hook-form": "^7.39.4",
+>>>>>>> 7d581b225e717fae6906efdc70062b2b83722d9a
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
