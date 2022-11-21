@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NavLink } from "react-router-dom";
 import "./footer.css"
 function Footer() {
@@ -41,6 +42,17 @@ function Footer() {
             <div className="End-Page">
             Tất cả các quyền © 2003-2021 LIBRARY Điều khoản sử dụng | Chính sách bảo mật
             </div>
+=======
+import styles from './Footer.module.scss';
+
+function Footer() {
+    return (
+      <div className={styles.Footer}>
+        <div className='Content'>
+
+            <h1>FOOTER</h1>
+        </div>
+>>>>>>> c7cb4d4a04f0adb71cc4a600b4d3065d318185b7
       </div>
     );
   }

@@ -3,16 +3,28 @@ import './Register.css';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from 'react-hook-form';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
+import { registerUser } from '../../../redux/apiRequest';
+import { useDispatch } from 'react-redux';
 function Register() {
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const {
         register,
         handleSubmit,
         formState: { errors },
         watch,
-    } = useForm({});
-    const onSubmit = (data) => console.log(data);
+    } = useForm();
+    const onSubmit = (data) => registerUser(
+        {
+        email: data.email, password: data.password, usernam: data.username
+        },
+        dispatch,
+        navigate
+        );
     const password = useRef({});
     password.current = watch('password', '');
     return (
@@ -22,6 +34,14 @@ function Register() {
                 <img className="Logo" src="Logo.svg"></img>
                 <p>Chào Mừng bạn!</p>
                 <h1>Đăng Kí</h1>
+                <label htmlFor="username">UserName</label>
+                <input
+                    type="username"
+                    name="username"
+                    id="username"
+                    placeholder="Email của bạn"
+                    {...register('username')}
+                ></input>
                 <label htmlFor="email">Email</label>
                 <input
                     type="email"
@@ -71,10 +91,10 @@ function Register() {
                 )}
 
                 <button className="submit">
-                    ĐĂNG NHẬP <FontAwesomeIcon icon={faArrowRight} />
+                    Đăng Ký Tài Khoản <FontAwesomeIcon icon={faArrowRight} />
                 </button>
                 <p className="textregister">
-                    Bạn chưa có tài khoản <NavLink to="/register">Đăng kí</NavLink>
+                    Bạn chưa có tài khoản <NavLink to="/login">Đăng Nhập</NavLink>
                 </p>
             </form>
         </div>
