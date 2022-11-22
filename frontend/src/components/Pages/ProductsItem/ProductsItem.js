@@ -2,22 +2,37 @@
 import styles from './ProductsItem.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Grid,Button } from '@material-ui/core';
 import { useState } from 'react';
+import { addProductsCarts } from '../../../redux/apiRequest';
+import { useNavigate } from 'react-router-dom';
 
 
 function ProductsItems() {
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const productsItem = useSelector((state)=> state.products.productsItem);
     const [quality, setQuality] = useState(1);
 
     const handleMinus = () => {
-        if(quality <= 0){
+        if(quality <= 1){
             return;
         }else {
             setQuality(Number(quality - 1))
         }
+    }
+
+    const handleAddCarts = () => {
+        addProductsCarts(
+        {
+            image: productsItem.image,
+            bookName: productsItem.bookName,
+            bookPrice: productsItem.bookPrice,
+            bookQuality: quality
+        },dispatch,navigate)
     }
 
   return (
@@ -28,7 +43,7 @@ function ProductsItems() {
                     <div className={styles.ProductsItemsLeft}>
                         <img className={styles.ProductsItemsLeftImg} src={productsItem.image} />
                         <div className={styles.ProductsItemsLeftAction}>
-                            <Button style={{color: '#f50057', backgroundColor: 'none', }} variant="contained">
+                            <Button onClick={handleAddCarts} style={{color: '#f50057', backgroundColor: 'none', }} variant="contained">
                                 Thêm Vào Giỏ Hàng
                             </Button>
                             <Button color="secondary" variant="contained">
@@ -63,7 +78,7 @@ function ProductsItems() {
                         </div>
 
                         <div className={styles.ProductsItemsPrice}>
-                            <span>{productsItem.bookPrice}đ</span>
+                            <span>{productsItem.bookPrice},000đ</span>
                         </div>
                         <div className={styles.ProductsItemsEndow} >
                             <span>Chính sách đổi trả</span>

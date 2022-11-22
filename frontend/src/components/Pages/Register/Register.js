@@ -20,7 +20,7 @@ function Register() {
     } = useForm();
     const onSubmit = (data) => registerUser(
         {
-        email: data.email, password: data.password, usernam: data.username
+        email: data.email, password: data.password, username: data.username
         },
         dispatch,
         navigate

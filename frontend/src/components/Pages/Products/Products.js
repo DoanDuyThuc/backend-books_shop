@@ -75,7 +75,7 @@ function Products() {
                               </h2>
                             </div>
                             <div className={styles.CardPrice}>
-                              <span>{allProduct.bookPrice}đ</span>
+                              <span>{allProduct.bookPrice},000đ</span>
                             </div>
                             <div className={styles.CardRating}>
                               sao

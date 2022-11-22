@@ -9,5 +9,8 @@ router.post("/register", authController.registerUser);
 //LOG IN
 router.post("/login", authController.loginUser);
 
+//LOG OUT
+router.post("/logout", authController.logoutUser);
+
 
 module.exports = router

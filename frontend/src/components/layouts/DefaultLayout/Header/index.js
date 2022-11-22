@@ -1,4 +1,4 @@
-import {NavLink, useNavigate } from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMagnifyingGlass, faUser, faCartShopping} from '@fortawesome/free-solid-svg-icons';
@@ -32,17 +32,17 @@ function Header() {
       <header className={styles.Wrapper}>
         <div className='Content'>
             <div className={styles.Logo} >
-                <NavLink to='/'> 
-                    <img className={styles.LogoImg} src="https://anybooks.vn/uploads/1792221100_anybookssachhaynendocreviewsachanybookslogo.png" alt="Anybooks - Sách Hay Nên Đọc - Review Sách" title="Anybooks - Sách Hay Nên Đọc - Review Sách"/></NavLink>
-                <NavLink/>
+                <Link to='/'> 
+                    <img className={styles.LogoImg} src="https://anybooks.vn/uploads/1792221100_anybookssachhaynendocreviewsachanybookslogo.png" alt="Anybooks - Sách Hay Nên Đọc - Review Sách" title="Anybooks - Sách Hay Nên Đọc - Review Sách"/></Link>
+                <Link/>
             </div>
             <div className={styles.Option}>
-                <NavLink to='/sanpham'>
+                <Link to='/sanpham'>
                     Sản Phẩm
-                </NavLink>
-                <NavLink to='/lienhe'>
+                </Link>
+                <Link to='/lienhe'>
                     Liên Hệ
-                </NavLink>
+                </Link>
             </div>
             <div className={styles.Search}>
                 <input onKeyDown={(e) => handleSubmitEnter(e)} onChange={(e) => setSearch(e.target.value)} placeholder='Search' spellCheck={false} />
@@ -58,10 +58,10 @@ function Header() {
                 </button>    
                 :
                 <div style={{paddingLeft: '36px'}} className={styles.ActionUser}>  
-                    <NavLink style={{textDecoration: 'none',color:'black'}} to='/login' >Đăng Nhập</NavLink>
+                    <Link style={{textDecoration: 'none',color:'black'}} to='/login' >Đăng Nhập</Link>
                 </div>
                 }
-                <button onClick={() => navigate('/giohang')} className={styles.ActionCart}>
+                <button onClick={() => navigate('/carts')} className={styles.ActionCart}>
                     <FontAwesomeIcon icon={faCartShopping}/>
                 </button>
             </div>

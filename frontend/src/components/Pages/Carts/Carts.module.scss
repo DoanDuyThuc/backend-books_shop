@@ -58,6 +58,17 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                span {
+                    word-break: break-word;
+                    white-space: normal;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    max-height: 6em;
+                    max-width: 25rem;
+                }
             }
         }
 
@@ -91,6 +102,42 @@
             &:hover {
                 color: rgb(201, 33, 39);
                 cursor: pointer;
+            }
+        }
+    }
+    
+    .CartsGridRight {
+        background-color: #fff;
+        margin-left: 8px;
+        box-shadow: rgb(17 12 46 / 15%) 0px 48px 100px 0px;
+        border-radius:6px ;
+        padding: 10px;
+
+        .CartsGridRightTitle {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            border-bottom: 1px solid #ebe8e8 ;
+            
+        }
+        .CartsGridRightSum {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border-radius: 6px;
+            background-color: #C92127;
+            cursor: pointer;
+            
+            span {
+                color: #fff;
+                font-weight: 600;
+                font-size: 1.6rem;
+
             }
         }
     }

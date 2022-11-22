@@ -59,6 +59,10 @@ class authController {
         }
     }
 
+    async logoutUser(req,res) {
+        
+    }
+
 }
 
 module.exports = new authController;
