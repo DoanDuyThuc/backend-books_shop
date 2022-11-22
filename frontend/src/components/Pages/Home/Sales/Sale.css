@@ -1,4 +1,4 @@
-.Trainding .swiper {
+.Sale .swiper {
     display: flex;
     width: 120rem;
     height: 40rem;
@@ -11,13 +11,13 @@
 
 .Content_trainding {
     display: flex;
-    margin-top: 20rem;
+    margin-top: 8rem;
     margin-left: 21rem;
     width: 118rem;
     justify-content: space-around;
 }
 
-.Trainding .swiper-slide {
+.Sale .swiper-slide {
     text-align: left;
     font-size: 18px;
 
@@ -35,16 +35,24 @@
     -webkit-align-items: center;
     align-items: center;
 }
-.Trainding h4 {
+.Sale h4 {
     margin-left: 1rem;
     margin-top: 1rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.Trainding .price {
+.Sale .price {
     margin-left: 1rem;
     font-weight: bold;
     font-size: 17px;
+}
+
+.Sale .price_sale {
+    margin-left: 1rem;
+    font-weight: inherit;
+    font-size: 17px;
+    color: red;
+    text-decoration: line-through;
 }
 .icon-heart {
     margin-left: 1rem;
@@ -52,12 +60,12 @@
     font-size: 27px;
 }
 
-.Trainding p {
+.Sale p {
     margin-left: 1rem;
     margin-top: 1rem;
-    font-size: 16px;
+    font-size: 14px;
 }
-.Trainding button {
+.Sale button {
     margin-top: 1rem;
     margin-left: 1rem;
     width: 12rem;
@@ -66,7 +74,7 @@
     color: #ffff;
 }
 
-.Trainding .swiper-slide img {
+.Sale .swiper-slide img {
     display: block;
     padding-right: 1.2rem;
     padding-top: 2rem;

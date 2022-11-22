@@ -10,21 +10,16 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import './Trainding.css';
+import './Sale.css';    
 
 // import required modules
 import { Pagination, Navigation } from 'swiper';
 
-export default function Trainding() {
+export default function Sale() {
     return (
-        <div className="Trainding">
+        <div className="Sale">
             <div className="Content_trainding">
-                <h2>Thịnh Hành</h2>
-                <p>Giả tưởng và khoa học viễn tưởng</p>
-                <p>Truyền cảm hứng</p>
-                <p>Truyền ngắn</p>
-                <p>Bí ẩn</p>
-                <p>Tình cảm</p>
+                <h2>Khuyến Mãi</h2>
             </div>
             <Swiper
                 slidesPerView={5}
@@ -42,7 +37,7 @@ export default function Trainding() {
                 <SwiperSlide>
                     <div className="product_trainding">
                         <img src="image2.svg"></img>
-                        <span className="price">99.000đ</span>
+                        <span className="price">99.000đ</span><span className="price_sale">99.000đ</span>  
                         <h4>Bắt Trẻ Đồng Xanh</h4>
                         <p>Holden Caulfield</p>
                         <button>Mua Ngay </button>
@@ -52,7 +47,7 @@ export default function Trainding() {
                 <SwiperSlide>
                     <div className="product_trainding">
                         <img src="image2.svg"></img>
-                        <span className="price">99.000đ</span>
+                        <span className="price">99.000đ</span><span className="price_sale">99.000đ</span>  
                         <h4>Bắt Trẻ Đồng Xanh</h4>
                         <p>Holden Caulfield</p>
                         <button>Mua Ngay </button>
@@ -62,7 +57,7 @@ export default function Trainding() {
                 <SwiperSlide>
                     <div className="product_trainding">
                         <img src="image2.svg"></img>
-                        <span className="price">99.000đ</span>
+                        <span className="price">99.000đ</span><span className="price_sale">99.000đ</span>  
                         <h4>Bắt Trẻ Đồng Xanh</h4>
                         <p>Holden Caulfield</p>
                         <button>Mua Ngay </button>
@@ -72,7 +67,7 @@ export default function Trainding() {
                 <SwiperSlide>
                     <div className="product_trainding">
                         <img src="image2.svg"></img>
-                        <span className="price">99.000đ</span>
+                        <span className="price">99.000đ</span><span className="price_sale">99.000đ</span>  
                         <h4>Bắt Trẻ Đồng Xanh</h4>
                         <p>Holden Caulfield</p>
                         <button>Mua Ngay </button>
@@ -82,7 +77,7 @@ export default function Trainding() {
                 <SwiperSlide>
                     <div className="product_trainding">
                         <img src="image2.svg"></img>
-                        <span className="price">99.000đ</span>
+                        <span className="price">99.000đ</span><span className="price_sale">99.000đ</span>  
                         <h4>Bắt Trẻ Đồng Xanh</h4>
                         <p>Holden Caulfield</p>
                         <button>Mua Ngay </button>
@@ -92,7 +87,7 @@ export default function Trainding() {
                 <SwiperSlide>
                     <div className="product_trainding">
                         <img src="image2.svg"></img>
-                        <span className="price">99.000đ</span>
+                        <span className="price">99.000đ</span><span className="price_sale">99.000đ</span>  
                         <h4>Bắt Trẻ Đồng Xanh</h4>
                         <p>Holden Caulfield</p>
                         <button>Mua Ngay </button>
@@ -102,7 +97,7 @@ export default function Trainding() {
                 <SwiperSlide>
                     <div className="product_trainding">
                         <img src="image2.svg"></img>
-                        <span className="price">99.000đ</span>
+                        <span className="price">99.000đ</span><span className="price_sale">99.000đ</span>  
                         <h4>Bắt Trẻ Đồng Xanh</h4>
                         <p>Holden Caulfield</p>
                         <button>Mua Ngay </button>
@@ -112,7 +107,7 @@ export default function Trainding() {
                 <SwiperSlide>
                     <div className="product_trainding">
                         <img src="image2.svg"></img>
-                        <span className="price">99.000đ</span>
+                        <span className="price">99.000đ</span><span className="price_sale">99.000đ</span>  
                         <h4>Bắt Trẻ Đồng Xanh</h4>
                         <p>Holden Caulfield</p>
                         <button>Mua Ngay </button>
@@ -122,7 +117,7 @@ export default function Trainding() {
                 <SwiperSlide>
                     <div className="product_trainding">
                         <img src="image2.svg"></img>
-                        <span className="price">99.000đ</span>
+                        <span className="price">99.000đ</span><span className="price_sale">99.000đ</span>  
                         <h4>Bắt Trẻ Đồng Xanh</h4>
                         <p>Holden Caulfield</p>
                         <button>Mua Ngay </button>

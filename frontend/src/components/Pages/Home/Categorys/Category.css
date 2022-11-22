@@ -1,0 +1,32 @@
+.Category_Container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 76rem;
+    margin-left: 41rem;
+}
+.Content_Category {
+    padding-top: 5rem;
+    text-align: center;
+    margin-left: 18rem;
+}
+
+.Category_item {
+    width: 20rem;
+    height: 8rem;
+    border: 1 solid rgb(0, 0, 0, 0.3);
+    background-color: white;
+    text-align: center;
+    padding-top: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    font-family: Bold;
+    color: black;
+    box-shadow: 2px 5px 17px #aaaaaa;
+    font-weight: 700;
+
+}
+
+
+
+
