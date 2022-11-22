@@ -4,6 +4,7 @@ function Home() {
   return (
     <div className='Content'>
       <div className={styles.Home}>
+          {/* Home Header */}
           <div className={styles.HomeHeader} >
             <div className={styles.HomeHeaderLeft} >
               <h1>NAPOLEON HILL</h1>
@@ -18,6 +19,8 @@ function Home() {
               <img src='https://cafefcdn.com/thumb_w/650/2018/11/30/1ts-m6bdlihi5sa4ii7gjw-1543584782794689749022-crop-15435847995581097992133.jpeg'  />
             </div>
           </div>
+          
+
       </div>
     </div>
   );

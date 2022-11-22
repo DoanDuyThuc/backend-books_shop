@@ -1,12 +1,32 @@
-import {NavLink } from 'react-router-dom';
+import {NavLink, useNavigate } from 'react-router-dom';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMagnifyingGlass, faUser, faCartShopping} from '@fortawesome/free-solid-svg-icons';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
+import { useState } from 'react';
+import { search } from '../../../../redux/productsSlice';
 
 function Header() {
 
     const User = useSelector((state) => state.auth.login.currentUser);
+
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const [searchValue, setSearch] = useState('')
+
+    console.log(searchValue);
+
+    const handleSubmitEnter = (e) => {
+        if(e.key === 'Enter') {
+            dispatch(search(searchValue))
+            navigate('/sanpham')
+        }
+    }
+
+    const handleSubmitClick = () => {
+        dispatch(search(searchValue))
+        navigate('/sanpham')
+    }
 
     return (
       <header className={styles.Wrapper}>
@@ -25,8 +45,8 @@ function Header() {
                 </NavLink>
             </div>
             <div className={styles.Search}>
-                <input placeholder='Search' spellCheck={false} />
-                <button className={styles.SearchBtn} >
+                <input onKeyDown={(e) => handleSubmitEnter(e)} onChange={(e) => setSearch(e.target.value)} placeholder='Search' spellCheck={false} />
+                <button onClick={() => handleSubmitClick()} className={styles.SearchBtn} >
                     <FontAwesomeIcon icon={faMagnifyingGlass}/>
                 </button>
             </div>
@@ -41,7 +61,7 @@ function Header() {
                     <NavLink style={{textDecoration: 'none',color:'black'}} to='/login' >Đăng Nhập</NavLink>
                 </div>
                 }
-                <button className={styles.ActionCart}>
+                <button onClick={() => navigate('/giohang')} className={styles.ActionCart}>
                     <FontAwesomeIcon icon={faCartShopping}/>
                 </button>
             </div>
