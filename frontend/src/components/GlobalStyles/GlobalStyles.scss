@@ -24,11 +24,17 @@ html {
 .Content {
     height: 100%;
     width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
+.CenterFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    color: #C92127;
+}
 
 
 body {

@@ -30,10 +30,10 @@ function Header() {
 
     return (
       <header className={styles.Wrapper}>
-        <div className='Content'>
+        <div className={'Content CenterFlex'}>
             <div className={styles.Logo} >
                 <Link to='/'> 
-                    <img className={styles.LogoImg} src="https://anybooks.vn/uploads/1792221100_anybookssachhaynendocreviewsachanybookslogo.png" alt="Anybooks - Sách Hay Nên Đọc - Review Sách" title="Anybooks - Sách Hay Nên Đọc - Review Sách"/></Link>
+                    <img className={styles.LogoImg} src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo/fahasa_logo.png" alt="Anybooks - Sách Hay Nên Đọc - Review Sách" title="Anybooks - Sách Hay Nên Đọc - Review Sách"/></Link>
                 <Link/>
             </div>
             <div className={styles.Option}>
@@ -57,7 +57,7 @@ function Header() {
                     <span>{User.staff.username}</span>
                 </button>    
                 :
-                <div style={{paddingLeft: '36px'}} className={styles.ActionUser}>  
+                <div style={{paddingLeft: '28px'}} className={styles.ActionUser}>  
                     <Link style={{textDecoration: 'none',color:'black'}} to='/login' >Đăng Nhập</Link>
                 </div>
                 }

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
@@ -15,15 +15,26 @@ import './Trainding.css';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper';
+import { getProductsItem } from '../../../../redux/apiRequest';
+import { useNavigate } from 'react-router-dom';
 
 export default function Trainding() {
 
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const AllProducts = useSelector((state) => state.products.productsHold.allProducts);
+
+    const ProductsTraindings = AllProducts.filter(trend => trend.top === true);
+
+    const handleGetItem = (id) => {
+        getProductsItem(dispatch, id,navigate)
+    }
 
     return (
         <div className="Trainding">
             <div className="Content_trainding">
-                <h3>Thịnh Hành</h3>
+                <h2>Thịnh Hành</h2>
                 <p>Giả tưởng và khoa học viễn tưởng</p>
                 <p>Truyền cảm hứng</p>
                 <p>Truyền ngắn</p>
@@ -44,13 +55,12 @@ export default function Trainding() {
                 className="mySwiper"
             >
 
-                {AllProducts.map((AllProduct,index) => (
+                {ProductsTraindings.map((ProductsTrainding,index) => (
                     <SwiperSlide key={index} >
-                        <div className="product_trainding">
-                            <img src={AllProduct.image}></img>
-                            <span className="price">{AllProduct.bookPrice}</span>
-                            <h4 className='products_trainding-title' >{AllProduct.bookName}</h4>
-                            <p>Holden Caulfield</p>
+                        <div onClick={() => handleGetItem(ProductsTrainding._id)} className="product_trainding">
+                            <img src={ProductsTrainding.image}></img>
+                            <span className="price">{ProductsTrainding.bookPrice},000đ</span>
+                            <h4 className='products_trainding-title' >{ProductsTrainding.bookName}</h4>
                             <button>Mua Ngay </button>
                             <FontAwesomeIcon icon={faHeart} className="icon-heart" />
                         </div>

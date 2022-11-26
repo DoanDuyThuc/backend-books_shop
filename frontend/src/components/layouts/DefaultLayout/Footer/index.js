@@ -4,7 +4,7 @@ function Footer() {
     return (
       <div className="Footer">
             <div className="Logo">
-            <img className="Logo" src="Logo.svg"></img>
+            <img className="Logo" src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo/fahasa_logo.png" alt="Anybooks - Sách Hay Nên Đọc - Review Sách" title="Anybooks - Sách Hay Nên Đọc - Review Sách"></img>
             </div>
             
             <div className="Content-Book">

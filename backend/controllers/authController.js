@@ -59,9 +59,6 @@ class authController {
         }
     }
 
-    async logoutUser(req,res) {
-        
-    }
 
 }
 

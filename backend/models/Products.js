@@ -14,6 +14,10 @@ const Products = new Schema({
     bookPrice: {
         type: String,
         require: true,
+    },
+    bookCategory: {
+        type: String,
+        require: true,
     }
 },{
     timestamps: true,

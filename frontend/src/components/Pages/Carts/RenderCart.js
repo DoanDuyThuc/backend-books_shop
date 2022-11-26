@@ -7,7 +7,7 @@ import { deleteCarts, getAllCarts, updateCartsQuality } from '../../../redux/api
 import { updateQualitySucces } from '../../../redux/CartsSlice';
 import styles from './Carts.module.scss';
 
-function RenderCarts({setCheckAll, checkAll, setCheckItem, checkItem}) {
+function RenderCarts() {
 
     const cartsItems= useSelector((state)=> state.carts.allCartsHold.allCarts)
     
@@ -28,13 +28,12 @@ function RenderCarts({setCheckAll, checkAll, setCheckItem, checkItem}) {
     }
 
     const handleDeleteCarts = (id) => {
-        deleteCarts(id,dispatch)
+        deleteCarts(id,dispatch);
     }
-
+    
     useEffect(() => {
         getAllCarts(dispatch)
     },[dispatch(updateQualitySucces())])
-
 
   return (
     <div >

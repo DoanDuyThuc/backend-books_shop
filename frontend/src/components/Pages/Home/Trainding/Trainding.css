@@ -9,10 +9,15 @@
     height: 35rem;
 }
 
+.product_trainding:hover {
+    box-shadow: 0px 0px 4px 2px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0px 0px 4px 2px rgb(0 0 0 / 10%);
+    cursor: pointer;
+}
+
 .Content_trainding {
     display: flex;
     margin-top: 20rem;
-    margin-left: 8rem;
     width: 118rem;
     justify-content: space-around;
 }
@@ -35,7 +40,7 @@
     -webkit-align-items: center;
     align-items: center;
 }
-.Trainding h4 {
+.products_trainding-title {
     line-height: 1.4em;
     word-break: break-word;
     white-space: normal;
@@ -48,11 +53,14 @@
     max-height: 2.8em;
     font-size: 0.78em;
     color: #333333;
+    padding: 0 14px;
 }
 
 .Trainding .price {
-    margin-left: 1rem;
+    padding: 0 14px;
     font-weight: bold;
+    font-size: 17px;
+    color: #C92127;
 }
 .icon-heart {
     margin-left: 1rem;
@@ -63,7 +71,7 @@
 .Trainding p {
     margin-left: 1rem;
     margin-top: 1rem;
-    font-size: 14px;
+    font-size: 16px;
 }
 .Trainding button {
     margin-top: 1rem;
@@ -72,6 +80,10 @@
     height: 3.4rem;
     background-color: orangered;
     color: #ffff;
+}
+
+.Trainding button:hover {
+    cursor: pointer;
 }
 
 .Trainding .swiper-slide img {

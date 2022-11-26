@@ -4,7 +4,7 @@
     position: relative;
     align-items: center;
 }
-img {
+.login > img, .Logo {
     height: 65rem;
 }
 
@@ -13,9 +13,11 @@ form {
     display: flex;
     flex-direction: column;
     position: absolute;
+    top: 0;
     margin: 5rem 0rem;
     background-color: white;
     border-radius: 1rem;
+    box-shadow: rgb(17 12 46 / 15%) 0px 48px 100px 0px;
 }
 
 .Login input {

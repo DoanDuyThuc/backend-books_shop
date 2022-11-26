@@ -4,10 +4,16 @@
     display: flex;
     justify-content: center;
     background-color: #FFFAF5;
+
 }
 
 .LogoImg {
-    max-height: 50px;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 220px;
+    height: 36px;
 }
 
 .Option {

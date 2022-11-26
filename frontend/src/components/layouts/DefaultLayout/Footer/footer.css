@@ -15,6 +15,7 @@
     width: 20rem;
     height: 12rem;
     align-items: center;
+    object-fit: contain;
 }
 
 ul li {

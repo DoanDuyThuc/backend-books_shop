@@ -54,7 +54,7 @@ function Carts() {
                     </div>
                 </div>
 
-                <RenderCarts setCheckAll={setCheckAll} checkAll={checkAll} checkItem={checkItem} setCheckItem={setCheckItem} />
+                <RenderCarts />
                 
             </Grid>
             <Grid xs={4}>
