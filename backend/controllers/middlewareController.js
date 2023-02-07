@@ -31,7 +31,7 @@ class middlewareControler {
                     res.status(403).json('token hết hạn')
                 }
                 req.staff = staff;
-                if(req.staff.id == req.params.id || req.staff.admin){
+                if(req.staff.admin){
                     next();
                 }
             })

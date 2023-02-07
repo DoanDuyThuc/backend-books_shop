@@ -6,7 +6,8 @@ const productsSlice = createSlice({
         productsHold: {
             allProducts: [],
             isFetching: false,
-            error: false
+            error: false,
+            isProductsSucces : false
         },
         productsPagination: {
             EnterSearch: '',
@@ -58,6 +59,57 @@ const productsSlice = createSlice({
         productsItemFailed: (state) => {
             state.productsHold.isFetching = false;
             state.productsHold.error = true;
+        },
+
+        // add products Item
+
+        addProductsItemStart: (state) => {
+            state.productsHold.isFetching = true;
+            state.productsHold.error = false;
+        },
+        addProductsItemSucces: (state) => {
+            state.productsHold.isFetching = false;
+            state.productsHold.isProductsSucces = true;
+            state.productsHold.error = false;
+        },
+        addProductsItemFailed: (state) => {
+            state.productsHold.isFetching = false;
+            state.productsHold.isProductsSucces = false;
+            state.productsHold.error = true;
+        },
+
+        // delete products Item
+
+        deleteProductsItemStart: (state) => {
+            state.productsHold.isFetching = true;
+            state.productsHold.error = false;
+        },
+        deleteProductsItemSucces: (state) => {
+            state.productsHold.isFetching = false;
+            state.productsHold.isProductsSucces = true;
+            state.productsHold.error = false;
+        },
+        deleteProductsItemFailed: (state) => {
+            state.productsHold.isFetching = false;
+            state.productsHold.isProductsSucces = false;
+            state.productsHold.error = true;
+        },
+
+        // update products Item
+
+        updateProductsItemStart: (state) => {
+            state.productsHold.isFetching = true;
+            state.productsHold.error = false;
+        },
+        updateProductsItemSucces: (state) => {
+            state.productsHold.isFetching = false;
+            state.productsHold.isProductsSucces = true;
+            state.productsHold.error = false;
+        },
+        updateProductsItemFailed: (state) => {
+            state.productsHold.isFetching = false;
+            state.productsHold.isProductsSucces = false;
+            state.productsHold.error = true;
         }
     }
 })
@@ -69,7 +121,16 @@ export const {
     update, prevBtn, nextBtn, search,
     productsItemStart,
     productsItemSucces,
-    productsItemFailed
+    productsItemFailed,
+    addProductsItemStart,
+    addProductsItemSucces,
+    addProductsItemFailed,
+    deleteProductsItemStart,
+    deleteProductsItemSucces,
+    deleteProductsItemFailed,
+    updateProductsItemStart,
+    updateProductsItemSucces,
+    updateProductsItemFailed
 } = productsSlice.actions;
 
 export default productsSlice.reducer;

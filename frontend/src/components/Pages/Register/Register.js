@@ -28,8 +28,8 @@ function Register() {
     const password = useRef({});
     password.current = watch('password', '');
     return (
-        <div className="Login">
-            <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="Register">
+            <form className='FormRegister' onSubmit={handleSubmit(onSubmit)}>
                 <img className="Logo" src="Logo.svg"></img>
                 <p>Chào Mừng bạn!</p>
                 <h1>Đăng Kí</h1>

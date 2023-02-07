@@ -4,7 +4,8 @@ import styles from './Products.module.scss';
 import { getProductsItem } from '../../../redux/apiRequest';
 import Pagination from './Pagination';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import {  useState } from 'react';
+
 
 function Products() {
 

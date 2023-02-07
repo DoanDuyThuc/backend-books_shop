@@ -21,7 +21,7 @@ function Login() {
     const onSubmit = (data) => loginUser(data,dispatch,navigate);
     return (
         <div className="Login">
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className='FormLogin' onSubmit={handleSubmit(onSubmit)}>
                 <img className="Logo" src="Logo.svg"></img>
                 <p>Chào Mừng bạn!</p>
                 <h1>Đăng Nhập</h1>

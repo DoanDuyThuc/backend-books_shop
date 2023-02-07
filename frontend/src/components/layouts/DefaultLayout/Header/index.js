@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMagnifyingGlass, faUser, faCartShopping} from '@fortawesome/free-solid-svg-icons';
 import {useDispatch, useSelector} from 'react-redux';
 import { useState } from 'react';
+import Modal from './Modal/Modal';
 import { search } from '../../../../redux/productsSlice';
 
 function Header() {
@@ -13,6 +14,9 @@ function Header() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [searchValue, setSearch] = useState('')
+
+    // modal
+    const [modal, setModal] = useState(false);
 
     console.log(searchValue);
 
@@ -54,7 +58,7 @@ function Header() {
                 {User ? 
                 <button className={styles.ActionUser}>
                     <FontAwesomeIcon icon={faUser}/>
-                    <span>{User.staff.username}</span>
+                    <span onClick={() => setModal(true)} >{User.staff.username}</span>
                 </button>    
                 :
                 <div style={{paddingLeft: '28px'}} className={styles.ActionUser}>  
@@ -66,6 +70,8 @@ function Header() {
                 </button>
             </div>
         </div>
+
+        {modal && <Modal setModal={setModal} />}
       </header>
     );
   }
